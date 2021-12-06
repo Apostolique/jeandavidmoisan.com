@@ -1,0 +1,21 @@
+{
+  "title": "Jean-David Moisan",
+  "url": "https://jeandavidmoisan.com/",
+  "language": "en",
+  "description": "I have fun with code.",
+  "feed": {
+    "subtitle": "I have fun with code.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://jeandavidmoisan.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://jeandavidmoisan.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Jean-David Moisan",
+    "email": "contact@jeandavidmoisan.com",
+    "url": "https://jeandavidmoisan.com/about-me/"
+  }
+}
