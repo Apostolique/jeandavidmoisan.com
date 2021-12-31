@@ -5,6 +5,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const htmlmin = require('html-minifier');
 
 module.exports = function(eleventyConfig) {
   // Add plugins
@@ -60,9 +61,8 @@ module.exports = function(eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
-  // Copy the `img` and `css` folders to the output
+  // Copy the `img` folder to the output
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
@@ -78,7 +78,52 @@ module.exports = function(eleventyConfig) {
     level: [1,2,3,4],
     slugify: eleventyConfig.getFilter("slug")
   });
+  markdownLibrary.use(require('./_plugins/prism'));
+  markdownLibrary.use(require('./_plugins/link'), { eleventyConfig });
   eleventyConfig.setLibrary("md", markdownLibrary);
+
+  eleventyConfig.addTransform('cssinject', async (content, outputPath) => {
+    if (outputPath && outputPath.endsWith('.html')) {
+      const postcss = require('postcss')
+      let css = fs.readFileSync('css/index.css')
+
+      await postcss([
+        require('postcss-import'),
+        require('tailwindcss/nesting'),
+        require('tailwindcss')(require('./tailwind.config.js').dynamicContent([{ raw: content, extension: 'html' }])),
+        require('autoprefixer'),
+      ])
+        .process(css, { from: 'css/index.css', to: '_site/index.css' })
+        .then(result => {
+          const reCSS = new RegExp('<link rel="stylesheet" href="/index.css">')
+          const code = `<style type="text/css">\n${result.css}\n</style>`
+          content = content.replace(reCSS, (_) => code)
+        })
+    }
+
+    return content
+  })
+
+  eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
+    if (process.env.ELEVENTY_PRODUCTION && outputPath && outputPath.endsWith('.html')) {
+      console.log('Finishing HTML')
+
+      return htmlmin.minify(content, {
+        minifyCSS: true,
+        collapseBooleanAttributes: true,
+        collapseInlineTagWhitespace: false,
+        collapseWhitespace: true,
+        decodeEntities: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        sortAttributes: true,
+        sortClassName: true,
+        useShortDoctype: true,
+      });
+    }
+
+    return content;
+  });
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig({
@@ -133,9 +178,9 @@ module.exports = function(eleventyConfig) {
 
     // These are all optional (defaults are shown):
     dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
+      input: "pages",
+      includes: "../_includes",
+      data: "../_data",
       output: "_site"
     }
   };

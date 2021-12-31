@@ -12,10 +12,9 @@ Leverage agile frameworks to provide a robust synopsis for high level overviews.
 ``` js/2/4
 // this is a command
 function myCommand() {
-	let counter = 0;
+  let counter = 0;
 
-	counter++;
-
+  counter++;
 }
 
 // Test with a line break above this line.
