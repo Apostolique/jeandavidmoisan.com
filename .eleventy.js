@@ -6,6 +6,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const htmlmin = require('html-minifier');
+const parseContent = require("./_plugins/parseContent")
 
 module.exports = function(eleventyConfig) {
   // Add plugins
@@ -44,6 +45,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("min", (...numbers) => {
     return Math.min.apply(null, numbers);
   });
+
+  eleventyConfig.addFilter('toc', content => parseContent.getToc(content));
 
   function filterTagList(tags) {
     return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
