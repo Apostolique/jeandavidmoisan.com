@@ -72,7 +72,7 @@ function getToc(content) {
       let newChild = {
         tagName: e.tagName,
         href: `#${e.attribs.id}`,
-        title: domutils.textContent(e),
+        title: domutils.textContent(e.childNodes[0]),
         children: []
       }
 
