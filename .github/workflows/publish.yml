@@ -16,8 +16,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
-    - name: Setup npm cache
-      uses: c-hive/gha-npm-cache@v1
     - name: Install and build
       run: |
         npm install
