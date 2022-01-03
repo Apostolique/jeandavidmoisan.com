@@ -4,58 +4,14 @@ templateClass: tmpl-post
 ---
 <h1>{{ title }}</h1>
 
-<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-{%- for tag in tags | filterTagList -%}
-{%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{%- endfor %}
-
-<!-- Table of Content -->
-<div>
-  {% set tableofcontent = content | toc %}
-  {% if tableofcontent | length %}
-  {% macro sidetoc(link) %}
-  <li>
-      <a
-        href="{{ link.href }}"
-      >
-        {{ link.title }}
-      </a>
-      {% if link.children %}
-      <ol>
-      {% for link in link.children %}
-      {{ sidetoc(link) }}
-      {% endfor %}
-      </ol>
-      {% endif %}
-  </li>
-  {% endmacro %}
-  <h5>Table of content:</h5>
-  <div>
-      <nav>
-        <ol>
-            {% for link in tableofcontent %}
-            <li>
-              <a
-                  href="{{ link.href }}"
-              >
-                  {{ link.title }}
-              </a>
-              {% if link.children %}
-              <ol>
-              {% for link in link.children %}
-              {{ sidetoc(link) }}
-              {% endfor %}
-              </ol>
-              {% endif %}
-            </li>
-            {% endfor %}
-        </ol>
-      </nav>
+<div class="not-prose flex justify-between">
+  <time class="text-sm text-gray-500" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+  <div class="space-x-2">
+    {%- for tag in tags | filterTagList -%}
+    {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+    <a class="bg-orange-700 rounded-full px-3 py-0.5 leading-5 font-medium text-sm text-gray-100" href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {%- endfor %}
   </div>
-  {% else %}
-  <p>No table of content.</p>
-  {% endif %}
 </div>
 
 {{ content | safe }}

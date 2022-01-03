@@ -25,6 +25,7 @@ let config = {
           header: '#111111',
           DEFAULT: '#080808',
         },
+        dark: "#111111"
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
