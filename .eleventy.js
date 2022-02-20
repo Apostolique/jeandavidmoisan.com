@@ -64,6 +64,13 @@ module.exports = function(eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  // To create a filter to determine duration of post
+  eleventyConfig.addFilter('readTime', content => {
+    const textOnly = content.replace(/(<([^>]+)>)/gi, '')
+    const readingSpeedPerMin = 450
+    return Math.max(1, Math.floor(textOnly.length / readingSpeedPerMin))
+  })
+
   // Copy the `img` folder to the output
   eleventyConfig.addPassthroughCopy("img");
 
