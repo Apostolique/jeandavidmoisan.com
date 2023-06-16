@@ -1,15 +1,14 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-post
 ---
 <h1>{{ title }}</h1>
 
-<div class="not-prose flex justify-between">
+<div class="not-prose flex flex-wrap justify-between">
   <time class="text-sm text-gray-500" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-  <div class="space-x-2">
+  <div class="flex flex-wrap justify-end ml-auto">
     {%- for tag in tags | filterTagList -%}
     {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-    <a class="bg-orange-700 rounded-full px-3 py-0.5 leading-5 font-medium text-sm text-gray-100" href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    <a class="inline-block bg-orange-700 rounded-full mx-1 mt-2 px-3 py-0.5 leading-5 font-medium text-sm text-gray-100" href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
     {%- endfor %}
   </div>
 </div>

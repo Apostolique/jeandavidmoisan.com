@@ -11,20 +11,24 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body class="dark:bg-dark antialiased text-gray-500 dark:text-gray-400">
-    <div class="mx-auto max-w-fit">
-      <header class="my-6 flex justify-between items-center">
-        <h1 class="text-2xl hover:text-gray-700 dark:hover:text-gray-200"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+    <div class="mx-auto max-w-7xl">
+      <header class="mx-2 my-6 max-w-65ch lg:my-10 sm:mx-6 lg:mx-10 flex flex-wrap justify-between items-center gap-x-4">
+        <h1 class="text-2xl hover:text-gray-700 dark:hover:text-gray-200 whitespace-nowrap"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
 
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-        <ul class="flex space-x-8">
+        <ul class="flex gap-x-8 ml-auto">
         {%- for entry in collections.all | eleventyNavigation %}
-          <li class="nav-item{% if entry.url == page.url %} underline{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+          {% if entry.url == page.url %}
+          <li class="underline"><span>{{ entry.title }}</span></li>
+          {% else %}
+          <li class="hover:text-gray-700 dark:hover:text-gray-200"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+          {% endif %}
         {%- endfor %}
         </ul>
       </header>
 
-      <div class="flex">
-        <main class="prose min-w-65ch dark:prose-invert {% if templateClass %} {{ templateClass }}{% endif %}">
+      <div class="flex mb-10">
+        <main class="mx-2 sm:mx-6 lg:mx-10 prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl dark:prose-invert w-full">
           {{ content | safe }}
         </main>
 

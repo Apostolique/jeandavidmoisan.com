@@ -1,16 +1,18 @@
-<ol class="not-prose list-none p-0" reversed style="counter-reset: list-item {{ (postslistCounter or postslist.length) + 1 }}">
-{% for post in postslist | reverse %}
-  <li class="{% if post.url == url %}{% endif %}">
-    <div class="flex flex-col pt-2 pb-4">
-      <time class="text-sm text-gray-500" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-      <div class="flex self-end space-x-2">
-        {% for tag in post.data.tags | filterTagList %}
-          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-          <a class="bg-orange-700 rounded-full px-3 py-0.5 leading-5 font-medium text-sm text-gray-100" href="{{ tagUrl | url }}">{{ tag }}</a>
-        {% endfor %}
+<div class="not-prose">
+  <ol class="list-none p-0" reversed style="counter-reset: list-item {{ (postslistCounter or postslist.length) + 1 }}">
+  {% for post in postslist | reverse %}
+    <li class="{% if post.url == url %}{% endif %}">
+      <div class="flex flex-col pt-2 pb-4">
+        <time class="text-sm text-gray-500" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+        <div class="flex flex-wrap justify-end ml-auto">
+          {% for tag in post.data.tags | filterTagList %}
+            {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+            <a class="inline-block bg-orange-700 rounded-full mx-1 mt-2 px-3 py-0.5 leading-5 font-medium text-sm text-gray-100" href="{{ tagUrl | url }}">{{ tag }}</a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  </li>
-{% endfor %}
-</ol>
+    </li>
+  {% endfor %}
+  </ol>
+</div>
