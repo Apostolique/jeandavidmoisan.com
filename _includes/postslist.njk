@@ -1,5 +1,5 @@
 <div class="not-prose">
-  <ol class="list-none p-0" reversed style="counter-reset: list-item {{ (postslistCounter or postslist.length) + 1 }}">
+  <ol class="list-none" reversed style="counter-reset: list-item {{ (postslistCounter or postslist.length) + 1 }}">
   {% for post in postslist | reverse %}
     <li class="{% if post.url == url %}{% endif %}">
       <div class="flex flex-col pt-2 pb-4">

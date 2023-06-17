@@ -4,7 +4,9 @@ layout: layouts/home.njk
 ---
 <h1>Tags</h1>
 
+<div class="not-prose">
 {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+  <a href="{{ tagUrl | url }}" class="inline-block bg-orange-700 rounded-full mx-1 mt-2 px-3 py-0.5 leading-5 font-medium text-sm text-gray-100">{{ tag }}</a>
 {% endfor %}
+</div>
