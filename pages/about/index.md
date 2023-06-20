@@ -6,4 +6,4 @@ eleventyNavigation:
   order: 3
 ---
 
-I am a person that writes stuff.
+I am a programmer working on [Rashtal](https://rashtal.com/). You can join my [Discord](https://discord.rashtal.com/).
