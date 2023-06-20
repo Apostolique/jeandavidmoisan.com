@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/posts/firstpost/</loc>
-    <lastmod>2018-05-01</lastmod>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/posts/using-a-graphics-tablet-as-a-programming-tool/</loc>
+    <lastmod>2018-03-14</lastmod>
   </url>
   
   <url>
-    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/posts/secondpost/</loc>
-    <lastmod>2018-07-04</lastmod>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/posts/weekend-projects/</loc>
+    <lastmod>2020-04-16</lastmod>
   </url>
   
   <url>
-    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/posts/thirdpost/</loc>
-    <lastmod>2018-08-24</lastmod>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/posts/korean-beef/</loc>
+    <lastmod>2020-09-30</lastmod>
   </url>
   
   <url>
-    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/posts/fourthpost/</loc>
-    <lastmod>2018-09-30</lastmod>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/posts/csharp-crash-course/</loc>
+    <lastmod>2020-10-24</lastmod>
   </url>
   
   <url>
@@ -47,22 +47,32 @@
   </url>
   
   <url>
-    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/another-tag/</loc>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/projects/</loc>
     <lastmod>2023-06-20</lastmod>
   </url>
   
   <url>
-    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/second-tag/</loc>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/philosophy/</loc>
     <lastmod>2023-06-20</lastmod>
   </url>
   
   <url>
-    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/posts-with-two-tags/</loc>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/csharp/</loc>
     <lastmod>2023-06-20</lastmod>
   </url>
   
   <url>
-    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/number-2/</loc>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/programming/</loc>
+    <lastmod>2023-06-20</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/recipe/</loc>
+    <lastmod>2023-06-20</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jeandavidmoisan.com/jeandavidmoisan.com/tags/tool/</loc>
     <lastmod>2023-06-20</lastmod>
   </url>
   
