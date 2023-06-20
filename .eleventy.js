@@ -8,6 +8,15 @@ const markdownItAnchor = require("markdown-it-anchor");
 const htmlmin = require('html-minifier');
 const parseContent = require("./_plugins/parseContent")
 
+let config = {
+  dir: {
+    input: 'pages'
+  }
+}
+let site = {
+  docs: 'pages'
+}
+
 module.exports = function(eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -16,9 +25,12 @@ module.exports = function(eleventyConfig) {
 
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.setUseGitIgnore(false);
 
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+
+  eleventyConfig.addPassthroughCopy("./pages/**/*.{jpg,png,gif}");
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("yyyy-LL-dd");
@@ -74,6 +86,15 @@ module.exports = function(eleventyConfig) {
   // Copy the `img` folder to the output
   eleventyConfig.addPassthroughCopy("img");
 
+  eleventyConfig.addCollection('readme', collection =>
+    collection.getAllSorted().map(page => {
+      if (page.fileSlug === 'README') {
+        page.url = page.url.replace('/README', '');
+        page.outputPath = page.outputPath.replace('/README', '');
+      }
+    })
+  );
+
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,
@@ -89,7 +110,7 @@ module.exports = function(eleventyConfig) {
     slugify: eleventyConfig.getFilter("slug")
   });
   markdownLibrary.use(require('./_plugins/prism'));
-  markdownLibrary.use(require('./_plugins/link'), { eleventyConfig });
+  markdownLibrary.use(require('./_plugins/link'), { eleventyConfig, config, site });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   eleventyConfig.addTransform('cssinject', async (content, outputPath) => {
