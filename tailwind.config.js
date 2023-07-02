@@ -8,6 +8,9 @@ let config = {
     "./_site/**/*.html",
     // { raw: rawFile, extension: 'html' },
   ],
+  safelist: [
+    'not-prose'
+  ],
   theme: {
     extend: {
       colors: {

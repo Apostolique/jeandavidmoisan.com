@@ -124,6 +124,7 @@ module.exports = function(eleventyConfig) {
         require('tailwindcss/nesting'),
         require('tailwindcss')(require('./tailwind.config.js').dynamicContent([{ raw: content, extension: 'html' }])),
         require('autoprefixer'),
+        ...(process.env.ELEVENTY_PRODUCTION ? [ require('cssnano')({ preset: 'default' }) ] : [])
       ])
         .process(css, { from: 'css/index.css', to: '_site/index.css' })
         .then(result => {
@@ -141,7 +142,7 @@ module.exports = function(eleventyConfig) {
       console.log('Finishing HTML')
 
       return htmlmin.minify(content, {
-        minifyCSS: true,
+        // minifyCSS: true,
         collapseBooleanAttributes: true,
         collapseInlineTagWhitespace: false,
         collapseWhitespace: true,
