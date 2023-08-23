@@ -198,7 +198,7 @@ module.exports = function(eleventyConfig) {
 
     // Optional (default is shown)
     pathPrefix: "/",
-    ...(process.env.ELEVENTY_PRODUCTION && { pathPrefix: "/jeandavidmoisan.com" }),
+    // ...(process.env.ELEVENTY_PRODUCTION && { pathPrefix: "/jeandavidmoisan.com" }),
     // -----------------------------------------------------------------
 
     // Pre-process *.md files with: (default: `liquid`)
