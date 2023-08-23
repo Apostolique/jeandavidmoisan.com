@@ -32,6 +32,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
 
   eleventyConfig.addPassthroughCopy("./pages/**/*.{jpg,png,gif}");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("yyyy-LL-dd");
