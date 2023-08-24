@@ -135,5 +135,9 @@
         .namespace {
             @apply text-code-green;
         }
+
+        .punctuation {
+            @apply text-code-white;
+        }
     }
 }
