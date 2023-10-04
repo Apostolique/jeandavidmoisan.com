@@ -1,5 +1,5 @@
 ---
-title: In the light of the moon
+title: By the light of the moon
 date: 2023-10-03
 tags:
  - story
