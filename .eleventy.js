@@ -130,7 +130,7 @@ module.exports = function(eleventyConfig) {
         .process(css, { from: 'css/index.css', to: '_site/index.css' })
         .then(result => {
           const reCSS = new RegExp('<link rel="stylesheet" href="/index.css">')
-          const code = `<style type="text/css">\n${result.css}\n</style>`
+          const code = `<style>\n${result.css}\n</style>`
           content = content.replace(reCSS, (_) => code)
         })
     }
