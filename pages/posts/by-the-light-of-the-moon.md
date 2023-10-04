@@ -21,10 +21,10 @@ He headed towards the office of a certain Mr. Lypo Thèque, the man who sold all
 
 In a matter of seconds, Yvan Dubois had arrived at his new house and was ready to sleep. Unfortunately, there was too much croaking for him to fall asleep because he lived near a marsh. During the night, he heard noises coming from the kitchen cupboard, and he went to see what was inside. He thought maybe it contained a mischievous elf because he had seen many of them tending to the frogs in the garden. To his great surprise, he found a witch who was at least 500 years old. There was even a song that was written shortly after this story, and its chorus described her quite well:
 
-> She had warts so big,
-> Blocking her sight,
-> And a pair of spiders,
-> In her nose day and night.
+> She had warts so large, a painful view,
+> Blocking her sight, her world askew,
+> And a pair of spiders, quite a peculiar crew,
+> In her nose they dwelled, a secret they knew.
 
 If I were to provide more details than the song does, you would have endless nightmares.
 
