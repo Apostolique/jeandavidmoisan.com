@@ -55,6 +55,8 @@ In a minute, Yvan went to fetch one. The elf took it and filled it with magical 
 
 The days before Christmas are not normally very, very long, and the moonlight soon arrived. Immediately, he went to his home and showed the pot filled with water to the witch. As soon as she saw the moon in the pot, her face became very joyful, and she transformed into a beautiful princess. The house turned into a majestic castle, and all the frogs in the marsh, without exception, turned back into human beings.
 
+![DALL-E 3 render](./by-the-light-of-the-moon.png)
+
 The old witch, now a young princess, told him that an evil fairy had cursed her: she had become a wicked witch, and her castle had turned into an old house. The fairy had told her that only if someone brought her the moon, the spell would be broken. But she couldn't say anything until she returned to normal, or else she would remain a witch forever.
 
 And the following evening, during a beautiful sunset, Yvan and the princess got married. They became the king and queen, lived happily, and had many children...
