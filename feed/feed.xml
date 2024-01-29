@@ -5,12 +5,34 @@
     
     <link href="https://jeandavidmoisan.com/feed/feed.xml" rel="self"/>
     <link href="https://jeandavidmoisan.com/"/>
-    <updated>2023-10-03T00:00:00Z</updated>
+    <updated>2024-01-29T00:00:00Z</updated>
     <id>https://jeandavidmoisan.com/</id>
     <author>
         <name>Jean-David Moisan</name>
         <email>contact@jeandavidmoisan.com</email>
     </author>
+    
+    <entry>
+        <title>Vinaigrette</title>
+        <link href="https://jeandavidmoisan.com/posts/vinaigrette/"/>
+        <updated>2024-01-29T00:00:00Z</updated>
+        <id>https://jeandavidmoisan.com/posts/vinaigrette/</id>
+        <content type="html">&lt;p&gt;My favorite salad dressing recipe.&lt;/p&gt;
+&lt;h2 id=&quot;ingredients&quot; tabindex=&quot;-1&quot;&gt;Ingredients &lt;a class=&quot;direct-link&quot; href=&quot;https://jeandavidmoisan.com/posts/vinaigrette/#ingredients&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Canola oil, 1 Cup&lt;/li&gt;
+&lt;li&gt;Vinegar, 1/3 Cup&lt;/li&gt;
+&lt;li&gt;Sugar, 1 tbsp&lt;/li&gt;
+&lt;li&gt;Salt, 1 1/2 tsp&lt;/li&gt;
+&lt;li&gt;Paprika, 1/2 tsp&lt;/li&gt;
+&lt;li&gt;Dry mustard, 1/2 tsp&lt;/li&gt;
+&lt;li&gt;Garlic salt, 1/3 tsp&lt;/li&gt;
+&lt;li&gt;Cayenne pepper, 1/3 tsp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;preparation&quot; tabindex=&quot;-1&quot;&gt;Preparation &lt;a class=&quot;direct-link&quot; href=&quot;https://jeandavidmoisan.com/posts/vinaigrette/#preparation&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Put all the ingredients in a bottle and mix.&lt;/p&gt;
+</content>
+    </entry>
     
     <entry>
         <title>By the light of the moon</title>
