@@ -20,7 +20,7 @@ Before I get into that though, I want to backtrack a little bit. There's somethi
     <iframe class="absolute w-full h-full" src="https://www.youtube.com/embed/u2dycJv55aQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Something to notice specifically, the artist above, [Jorge Jacinto](https://www.artstation.com/jjcanvas), starts by copy pasting his existing work, he moves and rotates things around. Really quickly he gets a composition going. Puts rough shapes in place. Over time, that composition barely changes. Even if you skip to the end of the video, the foundation is still there. In programming projects, it's really similar. You can work on something for a long time, and quite often, what you do early doesn't change too much. The initial work done on a project sets the ground for weeks to come.
+Something to notice specifically, the artist above, [Jorge Jacinto](https://www.artstation.com/jjcanvas), starts by copy pasting his existing work, he moves and rotates things around. He quickly gets a composition going, puts rough shapes in place. Over time, that composition barely changes. Even if you skip to the end of the video, the foundation is still there. In programming projects, it's really similar. You can work on something for a long time, and quite often, what you do early doesn't change too much. The initial work done on a project sets the ground for weeks to come.
 
 Another interesting concept I want to bring is this:
 
@@ -28,7 +28,7 @@ Another interesting concept I want to bring is this:
     <iframe class="absolute w-full h-full" src="https://www.youtube.com/embed/IYVcjFhpsHc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The Tibetan monks bring something really interesting to the table. They work on a project for weeks and right at the end, they destroy it. For them, it signifies having no attachments. I think that is a really important lesson to think about. Quite often, it's easy to wait until we find that one million dollar idea, but I think it's really good to work on simple projects and to let them go at the end.
+The Tibetan monks bring something really interesting to the table. They work on a project for weeks and right at the end, they destroy it. For them, it signifies having no attachments. I think that is a really important lesson to think about. Quite often, it's easy to wait until we find that one million dollar idea, but I think it's really good to work on simple projects and to let go of them at the end.
 
 ## Definition
 
@@ -126,7 +126,7 @@ I thought about it for the next week and then I went ahead an implemented it liv
 
 ![img](./weekend-projects-04.gif)
 
-You can grab the builds on [itch.io](https://itch.io/): https://apos.itch.io/binaryinput
+You can grab the builds on [itch.io](https://itch.io/): <https://apos.itch.io/binaryinput>.
 
 I posted about the project on [Tildes](https://tildes.net/) and Discord and got some great feedback. Here are some of the comments that I got:
 
@@ -146,7 +146,7 @@ As a bonus part of this talk, I want to suggest a technique if you work on a lar
 
 While it's ok to work alone, weekend projects are fun in a team too. Especially if you work with people online, it is quite frequent to start a project and see people disappear after days or weeks. With weekend projects, there's no time to drop off. You get in the zone, then you're done. I suggest Discord first as it's a great place to find active people. Discord communities are very dynamic. People constantly share their own projects which is good for motivation and inspiration. Tildes is a close second. They have weekly threads for people to share what they are working on. The community is still small and it soon feels like a tight group. Reddit is a bit more hit of miss. There's a bit more searching to do but there are people in there that are hidden gems.
 
-* [Rashtal Discord](https://discord.rashtal.com/) [MonoGame Discord](https://discord.gg/tsuucV4)
+* [Rashtal Discord](https://discord.rashtal.com/) - [MonoGame Discord](https://discord.gg/tsuucV4)
 * [Tildes](https://tildes.net/)
 * [Reddit INAT](https://www.reddit.com/r/INAT/)
 
