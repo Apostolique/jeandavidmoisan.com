@@ -121,13 +121,9 @@ module.exports = function(eleventyConfig) {
       let css = fs.readFileSync('css/index.css')
 
       await postcss([
-        require('postcss-import'),
-        require('tailwindcss/nesting'),
-        require('tailwindcss')(require('./tailwind.config.js').dynamicContent([{ raw: content, extension: 'html' }])),
-        require('autoprefixer'),
-        ...(process.env.ELEVENTY_PRODUCTION ? [ require('cssnano')({ preset: 'default' }) ] : [])
+        require('@tailwindcss/postcss')({ optimize: { minify: !!process.env.ELEVENTY_PRODUCTION } }),
       ])
-        .process(css, { from: 'css/index.css', to: '_site/index.css' })
+        .process(css, { from: 'css/index.css', document: content })
         .then(result => {
           const reCSS = new RegExp('<link rel="stylesheet" href="/index.css">')
           const code = `<style>\n${result.css}\n</style>`

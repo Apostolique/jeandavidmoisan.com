@@ -1,6 +1,3 @@
-@layer components {
-   /* word-break */
-   .break-anywhere {
-      overflow-wrap: anywhere;
-   }
+@utility break-anywhere {
+   overflow-wrap: anywhere;
 }
