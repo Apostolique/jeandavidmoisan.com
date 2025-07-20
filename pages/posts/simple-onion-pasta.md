@@ -10,10 +10,10 @@ This isn't so much of a precise recipe. I do it based on how I'm feeling.
 
 ## Ingredients
 
-* Olive oil
+* Olive Oil, quantity is up to you, I cover my pan's bottom
 * Cayenne Pepper, usually 4 or more
-* Onion 1 or 2
-* Oyster Sauce 1 tablespoon
+* Onion, 1 or 2
+* Oyster Sauce, 1 tablespoon
 * Salted Herbs, 1 tablespoon
 * Garlic (Optional)
 * Haskaps (Optional)
